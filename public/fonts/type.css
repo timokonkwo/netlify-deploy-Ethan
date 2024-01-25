@@ -21,3 +21,10 @@
   font-display: swap;
   src: url("fonts/Inter-SemiBold.woff2") format("woff2");
 }
+
+@font-face {
+  font-family: tt hoves pro trial variable;
+  font-style: normal;
+  src: local("TT Hoves Pro Trial Variable"),
+    url("fonts/TT Hoves Pro Trial Variable.woff") format("woff");
+}
