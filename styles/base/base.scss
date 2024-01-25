@@ -8,12 +8,29 @@ $breakpoints: (
 
 html {
   font-size: calc(100vw / 1512 * 10);
+  background: var(--bg);
   @include media("<phone") {
-    font-size: calc(100vw / 390 * 10);
+    font-size: calc(100vw / 393 * 10);
     width: 100vw !important;
   }
   @include media(">=desktop") {
     font-size: calc(100vw / 2750 * 10);
+  }
+
+  --bg: #fff;
+  --text: #000;
+  --transText: #8e8e8e;
+  --transText2: #777878;
+  --transText3: #565560;
+  --transText4: #82808f;
+
+  &.dark {
+    --bg: #100725;
+    --text: #fff;
+    --transText: #7d7fa8;
+    --transText2: #606c85;
+    --transText3: #dcdbe0;
+    --transText4: #b1b0b9;
   }
 }
 
@@ -42,10 +59,31 @@ body {
   }
 }
 
+[dark] {
+  html:not(.dark) & {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+[light] {
+  .dark & {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
 .invisible {
   visibility: hidden;
 }
 
 .visible {
   visibility: visible;
+}
+
+button {
+  background: transparent;
+  padding: unset;
 }

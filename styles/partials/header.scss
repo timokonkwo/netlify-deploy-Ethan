@@ -1,2 +1,171 @@
 header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.header__intro {
+  background: linear-gradient(269deg, #ffd8db -18.44%, #8057da 137.37%);
+  text-align: center;
+  color: #fff;
+  font-family: Inter;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 139%; /* 2.224rem */
+  padding: 0.7rem;
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 0.9rem;
+    right: 1.4rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    cursor: pointer;
+  }
+
+  @include media("<phone") {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  padding-left: 12rem;
+  padding-right: 7.7rem;
+  padding-top: 2.4rem;
+  padding-bottom: 1.2rem;
+  background: linear-gradient(45deg, var(--bg) 30%, transparent);
+  @include media("<phone") {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 4rem;
+    background: linear-gradient(45deg, var(--bg) -50%, transparent);
+  }
+}
+
+.header__menu__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-right: 7.2rem;
+  @include media("<phone") {
+    gap: 0.64rem;
+    margin-right: auto;
+  }
+
+  img {
+    width: 4.6rem;
+    height: 4.7rem;
+    @include media("<phone") {
+      width: 3.7047rem;
+      height: 3.7852rem;
+    }
+  }
+
+  h1 {
+    color: var(--text);
+    font-family: Inter;
+    font-size: 2.4641rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    @include media("<phone") {
+      font-size: 1.9845rem;
+    }
+  }
+}
+
+.header__menu__links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.header__menu__link {
+  color: var(--transText);
+  font-family: Inter;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.header__menu__wallet {
+  color: #7f56d9;
+  font-family: Inter;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 3.8rem;
+  background: linear-gradient(
+      77deg,
+      rgba(215, 197, 255, 0.72) -54.66%,
+      rgba(255, 255, 255, 0.72) 111.42%
+    ),
+    linear-gradient(261deg, #ffc4a4 -3.11%, #fff 123.01%);
+  margin-left: 25.2rem;
+  padding: 1.05rem 1.6rem;
+  height: 4rem;
+  width: 13.7rem;
+  display: grid;
+  place-content: center;
+}
+
+.header__menu__stake {
+  color: #fff;
+  font-family: Inter;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  border-radius: 5.5rem;
+  border: 0.1rem solid #9771ea;
+  background: linear-gradient(
+      180deg,
+      rgba(81, 44, 161, 0.2) 0%,
+      rgba(0, 0, 0, 0) 25%
+    ),
+    #7f56d9;
+  box-shadow: 0 0.1rem 0.15rem 0 #cebcf7;
+  padding: 1rem 1.6rem;
+  height: 4rem;
+  width: 14.6rem;
+  display: grid;
+  place-content: center;
+  margin-left: auto;
+}
+
+.header__menu__toggle {
+  margin-left: 1.6rem;
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  svg:last-of-type {
+    display: none;
+  }
+
+  .dark & {
+    svg:first-of-type {
+      display: none;
+    }
+    svg:last-of-type {
+      display: block;
+    }
+  }
+}
+
+.header__menu__open {
+  margin-left: 1.3rem;
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
 }

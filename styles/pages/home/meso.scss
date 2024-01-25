@@ -1,0 +1,263 @@
+.home__meso {
+  padding-top: 19.06rem;
+  padding-bottom: 10rem;
+  padding-left: 12.1rem;
+  position: relative;
+  width: 100vw;
+  overflow-x: hidden;
+  z-index: 1;
+  @include media("<phone") {
+    padding-top: 15.77rem;
+    padding-left: 2rem;
+  }
+}
+
+.home__meso__pre {
+  color: var(--transText3);
+  font-family: "TT Hoves Pro Trial Variable", sans-serif;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 283;
+  line-height: 149%; /* 1.937rem */
+  letter-spacing: 0.91rem;
+  @include media("<phone") {
+    font-size: 1.1rem;
+    letter-spacing: 0.77rem;
+  }
+}
+
+.home__meso__head {
+  color: var(--text);
+  font-family: "TT Hoves Pro Trial Variable", sans-serif;
+  font-size: 5.2235rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 6.2682rem */
+  width: 89rem;
+  margin-top: 2.2rem;
+  @include media("<phone") {
+    font-size: 3rem;
+    width: 35.3rem;
+    margin-top: 1.2rem;
+  }
+
+  i {
+    background: linear-gradient(268deg, #ffd7da 0%, #7f56d9 58.81%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.home__meso__sub {
+  color: var(--text);
+  font-family: "TT Hoves Pro Trial Variable", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 283;
+  line-height: 149%; /* 2.98rem */
+  letter-spacing: 0.02rem;
+  width: 87rem;
+  margin-top: 2.2rem;
+  @include media("<phone") {
+    font-size: 1.4rem;
+    letter-spacing: 0.014rem;
+    width: 34.5067rem;
+    margin-top: 1.2rem;
+  }
+}
+
+.home__meso__icon {
+  position: absolute;
+  width: 4.6rem;
+  height: 4.7rem;
+  top: 27.96rem;
+  right: 32.1rem;
+  @include media("<phone") {
+    width: 2.4rem;
+    height: 2.4rem;
+    right: 1.5rem;
+  }
+}
+
+.home__meso__meso {
+  width: 151.3rem;
+  height: 41rem;
+  position: relative;
+  left: -12.1rem;
+  margin-top: 3.9rem;
+  @include media("<phone") {
+    width: 69.4rem;
+    left: -18.8rem;
+    height: auto;
+    margin-top: 2.58rem;
+  }
+}
+
+.home__meso__stats {
+  display: flex;
+  gap: 14.95rem;
+  margin-top: 3.8rem;
+  width: fit-content;
+  @include media("<phone") {
+    padding-left: 1.8rem;
+    padding-right: 3.8rem;
+    margin: 3.35rem auto 0;
+    flex-direction: column;
+    gap: 6.5rem;
+  }
+}
+
+.home__meso__stat {
+  h3 {
+    text-align: center;
+    font-family: "TT Hoves Pro Trial Variable", sans-serif;
+    font-size: 5.6rem;
+    font-style: normal;
+    font-weight: 493;
+    line-height: 111%; /* 6.216rem */
+    background: linear-gradient(180deg, #8057da 0%, #ffd8db 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include media("<phone") {
+      font-size: 4.2rem;
+    }
+  }
+
+  p {
+    color: var(--transText3);
+    text-align: center;
+    font-family: "TT Hoves Pro Trial Variable", sans-serif;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 111%; /* 2.442rem */
+    padding-top: 0.8rem;
+    @include media("<phone") {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.home__meso__bg {
+  width: 151.4rem;
+  height: 89.1rem;
+  left: 0rem;
+  top: 121.26rem;
+  position: absolute;
+  z-index: -1;
+  @include media("<phone") {
+    width: 41.588rem;
+    height: 28.5151rem;
+    left: -1.49rem;
+    top: 112.54rem;
+  }
+}
+
+.home__meso__intro {
+  color: var(--transText3);
+  font-family: "TT Hoves Pro Trial Variable", sans-serif;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 283;
+  line-height: 149%; /* 1.937rem */
+  letter-spacing: 0.91rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding-right: 12.1rem;
+  margin-top: 51.4rem;
+  @include media("<phone") {
+    font-size: 1.1rem;
+    letter-spacing: 0.77rem;
+    margin-top: 26.1rem;
+    padding-right: 2rem;
+  }
+}
+
+.home__meso__title {
+  color: var(--text);
+  text-align: center;
+  font-family: "TT Hoves Pro Trial Variable", sans-serif;
+  font-size: 4.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 5.04rem */
+  width: 104.3rem;
+  padding-right: 12.1rem;
+  margin: 0.8rem auto 0;
+  @include media("<phone") {
+    font-size: 2.2rem;
+    width: 37.3rem;
+    padding-right: 1.9rem;
+    margin-top: 1.5rem;
+  }
+
+  i {
+    background: linear-gradient(87deg, #ffd7da 25.18%, #7f56d9 56.07%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.home__meso__list {
+  display: flex;
+  gap: 10.9rem;
+  margin: 13rem auto 0;
+  padding-right: 12.1rem;
+  width: fit-content;
+  @include media("<phone") {
+    flex-direction: column;
+    gap: 3.4rem;
+    margin-top: 6.5rem;
+    padding-right: 2rem;
+  }
+}
+
+.home__meso__item {
+  width: 27.9rem;
+  height: 21.2rem;
+  border-radius: 1.2rem;
+  border: 0.1rem solid #ffd7da;
+  background: var(--bg);
+  box-shadow: 0rem 2.2rem 3.51rem 0rem rgba(222, 220, 232, 0.57);
+  padding: 2rem 2.45rem;
+  display: flex;
+  flex-direction: column;
+  @include media("<phone") {
+    width: 34.9rem;
+    height: 21.2rem;
+  }
+
+  .dark & {
+    box-shadow: unset;
+  }
+
+  img {
+    width: 4.1rem;
+    height: 4.2rem;
+  }
+
+  h4 {
+    color: var(--text);
+    text-align: center;
+    font-family: "TT Hoves Pro Trial", sans-serif;
+    font-size: 2.7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 111%; /* 2.997rem */
+    text-align: left;
+    margin-top: auto;
+  }
+
+  p {
+    color: #82808f;
+    font-family: "TT Hoves Pro Trial", sans-serif;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 1.96rem */
+    padding-top: 1.2rem;
+  }
+}

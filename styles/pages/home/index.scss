@@ -1,2 +1,11 @@
 .__home {
+  padding-top: 10.6rem;
+  position: relative;
+  @include media("<phone") {
+    padding-top: 11.0852rem;
+  }
 }
+
+@import "hero.scss";
+@import "meso.scss";
+@import "steps.scss";

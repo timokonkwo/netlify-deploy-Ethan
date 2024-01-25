@@ -1,0 +1,435 @@
+.home__hero {
+  padding-top: 17.2rem;
+  padding-left: 12rem;
+  width: 100vw;
+  overflow-x: hidden;
+  @include media("<phone") {
+    padding-top: 34rem;
+    padding-left: 2.4rem;
+  }
+}
+
+.home__hero__head {
+  color: var(--text);
+  font-family: "TT Hoves Pro Trial Variable", sans-serif;
+  font-size: 5.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 116%; /* 6.264rem */
+  width: 62.5rem;
+  @include media("<phone") {
+    font-size: 3.4495rem;
+    line-height: 111%; /* 3.829rem */
+    width: 33.1049rem;
+  }
+
+  i {
+    background: linear-gradient(259deg, #7f56d9 30.02%, #ffd7da 65.34%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include media("<phone") {
+      background: linear-gradient(265deg, #7f56d9 44.34%, #ffd7da 107.97%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: block;
+    }
+  }
+}
+
+.home__hero__sub {
+  width: 62.5rem;
+  color: var(--transText2);
+  font-family: Inter;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 149%; /* 3.278rem */
+  margin-top: 2.3rem;
+  @include media("<phone") {
+    width: 32.1782rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 149%; /* 2.086rem */
+    letter-spacing: -0.028rem;
+  }
+
+  i {
+    color: var(--text);
+  }
+}
+
+.home__hero__ctas {
+  display: flex;
+  margin-top: 4.2rem;
+  gap: 2.9rem;
+  @include media("<phone") {
+    margin-top: 5.42rem;
+    gap: 0.8rem;
+  }
+}
+
+.home__hero__primary {
+  color: #ffff;
+  font-family: Inter;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  border-radius: 0.8rem;
+  border: 0.1rem solid #9771ea;
+  background: linear-gradient(
+      180deg,
+      rgba(81, 44, 161, 0.2) 0%,
+      rgba(0, 0, 0, 0) 25%
+    ),
+    #7f56d9;
+  box-shadow: 0rem 0.1rem 0.15rem 0rem #cebcf7;
+  height: 4rem;
+  width: 22.5rem;
+  display: grid;
+  place-content: center;
+  @include media("<phone") {
+    width: 20.4rem;
+  }
+}
+
+.home__hero__secondary {
+  color: #7f56d9;
+  font-family: Inter;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  border-radius: 0.8rem;
+  border: 0.1rem solid #fff;
+  background: #f1eaff;
+  box-shadow: 0rem 0.1rem 0.15rem 0rem #cebcf7;
+  width: 14.6rem;
+  height: 4rem;
+  display: grid;
+  place-content: center;
+  @include media("<phone") {
+    width: 13.7rem;
+  }
+}
+
+.home__hero__supporters {
+  margin-top: 14.8rem;
+  @include media("<phone") {
+    margin-top: 6rem;
+  }
+
+  p {
+    color: #8e8e8e;
+    font-family: Inter;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 109%; /* 1.526rem */
+    letter-spacing: 0.112rem;
+    text-transform: uppercase;
+    @include media("<phone") {
+      font-size: 1.2rem;
+      letter-spacing: 0.096rem;
+    }
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 5.91rem;
+    margin-top: 2.2rem;
+    @include media("<phone") {
+      gap: 4.4774rem;
+      margin-top: 2.2rem;
+    }
+  }
+
+  img:nth-of-type(1),
+  img:nth-of-type(2) {
+    width: 13.9313rem;
+    height: 2.1176rem;
+    @include media("<phone") {
+      width: 10.5598rem;
+      height: 1.6051rem;
+    }
+  }
+
+  img:nth-of-type(3),
+  img:nth-of-type(4) {
+    width: 11.145rem;
+    height: 3.0092rem;
+    @include media("<phone") {
+      width: 8.4478rem;
+      height: 2.2809rem;
+    }
+  }
+
+  img:nth-of-type(5) {
+    width: 6.9099rem;
+    height: 2.1176rem;
+    @include media("<phone") {
+      width: 5.2377rem;
+      height: 1.6051rem;
+    }
+    .dark & {
+      filter: invert(1);
+    }
+  }
+}
+
+.home__hero__bg {
+  width: 94.9rem;
+  height: 94.1rem;
+  position: absolute;
+  top: 3.6rem;
+  right: 0;
+  z-index: -1;
+  pointer-events: none;
+  @include media("<phone") {
+    width: 39.3rem;
+    height: 95.1rem;
+    top: 0;
+  }
+}
+
+.home__hero__chats {
+  position: absolute;
+  top: 17.4rem;
+  right: 12.15rem;
+  width: 47.9rem;
+  height: 39rem;
+  display: grid;
+  gap: 3rem;
+  @include media("<phone") {
+    top: 8.9rem;
+    right: -4.4rem;
+    transform: scale(0.65);
+  }
+}
+
+.home__hero__chat {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.9rem;
+
+  &:nth-of-type(2n) {
+    flex-direction: row-reverse;
+    gap: 0.4rem;
+    & > img {
+      width: 3.8rem;
+      height: 3.9rem;
+    }
+  }
+
+  & > img {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 4.2rem;
+  }
+
+  div {
+    border: 0.1rem solid #ffd1d5;
+    box-shadow: 0rem 1.8rem 2.57rem 0rem rgba(175, 181, 200, 0.25);
+    padding: 1.15rem 2.55rem;
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 127%; /* 1.905rem */
+    width: 33.4rem;
+    min-height: 5.2rem;
+    align-items: center;
+    display: grid;
+    position: relative;
+    .dark & {
+      box-shadow: 0rem 1.8rem 2.57rem 0rem rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  div[left] {
+    border-radius: 2rem 2rem 2rem 0rem;
+    color: #757f91;
+    background: #fffefe;
+  }
+
+  div[right] {
+    border-radius: 2rem 2rem 0rem 2rem;
+    color: #fff;
+    background: #2a0144;
+  }
+
+  div:has(svg) {
+    padding-left: 1.1rem;
+  }
+
+  &:last-of-type div {
+    border-radius: 0.8rem 0.8rem 0rem 0.8rem;
+  }
+
+  p {
+    display: flex;
+    gap: 0.8rem;
+  }
+
+  div img {
+    position: absolute;
+    width: 3.17391rem;
+    height: 3.04167rem;
+    top: -1rem;
+    right: -0.57rem;
+  }
+
+  div[right] img {
+    right: -0.7rem;
+  }
+}
+
+.home__hero__figure {
+  width: 25.73rem;
+  height: 61.9rem;
+  position: absolute;
+  top: 63.2rem;
+  right: 21.17rem;
+  @include media("<phone") {
+    display: none;
+  }
+}
+
+.home__hero__video {
+  width: 127.4rem;
+  height: 67.2rem;
+  margin-top: 7.89rem;
+  position: relative;
+  z-index: -1;
+  border-radius: 1.2rem;
+  border: 0.2rem solid #fff;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+  overflow: hidden;
+  @include media("<phone") {
+    width: 35.2rem;
+    height: 27.7rem;
+    margin-top: 8.42rem;
+    margin-left: -0.35rem;
+  }
+
+  .dark & {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(0, 0, 0, 0.25) 100%
+    );
+  }
+
+  svg {
+    width: 17.8rem;
+    height: 17.8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include media("<phone") {
+      width: 11.2rem;
+      height: 11.2rem;
+    }
+  }
+}
+
+.home__hero__clients {
+  margin-top: 11rem;
+  text-align: center;
+  color: var(--text);
+  font-family: Inter;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 109%; /* 1.526rem */
+  letter-spacing: 0.112rem;
+  text-transform: uppercase;
+  position: relative;
+  height: 11.14164rem;
+  @include media("<phone") {
+    margin-top: 8.4rem;
+    font-size: 1.2rem;
+    line-height: 142%; /* 1.704rem */
+    letter-spacing: 0.096rem;
+    width: 36.2rem;
+    margin-left: -0.8rem;
+    height: unset;
+  }
+
+  div {
+    position: absolute;
+    bottom: 0;
+    left: -10.2rem;
+    display: flex;
+    width: calc(100vw - 3.6rem);
+    @include media("<phone") {
+      position: unset;
+    }
+  }
+
+  img {
+    width: 156.8rem;
+    height: 4.4703rem;
+    @include media("<phone") {
+      width: 36.2rem;
+      height: 7.729rem;
+      margin-top: 4.2rem;
+    }
+
+    .dark & {
+      filter: invert(0.5);
+      mix-blend-mode: plus-lighter;
+    }
+  }
+
+  .left {
+    position: absolute;
+    left: -1.8rem;
+    background: linear-gradient(
+      271deg,
+      #fff 15.38%,
+      rgba(255, 255, 255, 0) 93.76%
+    );
+    width: 29.7863rem;
+    height: 5.5416rem;
+    transform: rotate(180deg);
+
+    .dark & {
+      background: linear-gradient(
+        271deg,
+        #100725 15.38%,
+        rgba(16, 7, 37, 0) 93.76%
+      );
+      z-index: 1;
+    }
+  }
+
+  .right {
+    position: absolute;
+    left: 119.6rem;
+    background: linear-gradient(
+      271deg,
+      #fff 15.38%,
+      rgba(255, 255, 255, 0) 93.76%
+    );
+    width: 29.7863rem;
+    height: 5.5416rem;
+
+    .dark & {
+      background: linear-gradient(
+        271deg,
+        #100725 15.38%,
+        rgba(16, 7, 37, 0) 93.76%
+      );
+      z-index: 1;
+    }
+  }
+}
