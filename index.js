@@ -32,7 +32,7 @@ app.set("views", path.join(__dirname, "views"))
 app.set("view engine", "pug")
 
 const titles = {
-  home: "WIP",
+  home: "PAAL AI | Create and Integrate Advanced Crypto & AI Bots",
 }
 
 app.get("/", async (req, res) => {

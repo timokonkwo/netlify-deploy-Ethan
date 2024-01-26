@@ -11,6 +11,7 @@ export default class Home {
     this.createModes()
     this.createNav()
     this.createPlay()
+    this.createExpand()
 
     const menu = window.$(".menu")
 
@@ -26,6 +27,21 @@ export default class Home {
         }
       })
     })
+  }
+  createExpand() {
+    const btn = window.$(".home__outro__more")
+    const article = window.$(".home__outro__article")
+    const figure = window.$(".home__outro__figure")
+    const shadow = window.$(".home__outro__shadow")
+    const text = window.$(".home__outro__details")
+
+    btn.onclick = () => {
+      shadow.style.display = "none"
+      btn.style.display = "none"
+      text.style.height = "unset"
+      article.style.height = "119.5rem"
+      figure.style.top = "85rem"
+    }
   }
   createPlay() {
     const btn = window.$(".home__hero__video svg")
