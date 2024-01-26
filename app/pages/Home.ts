@@ -36,7 +36,7 @@ export default class Home {
   }
 
   createHero() {
-    gsap
+    const tl = gsap
       .timeline()
       .set(".home__hero__chats", { autoAlpha: 1 })
       .set(".home__hero__chat", { maxHeight: "0rem" })
@@ -123,6 +123,8 @@ export default class Home {
         delay: 1,
         ease: "none",
       })
+
+    tl.timeScale(2)
   }
 
   createTestimonial() {
