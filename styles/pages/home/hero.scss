@@ -202,7 +202,9 @@
   width: 47.9rem;
   height: 39rem;
   display: grid;
+  align-content: flex-end;
   gap: 3rem;
+  opacity: 0;
   @include media("<phone") {
     top: 8.9rem;
     right: -4.4rem;
@@ -214,6 +216,8 @@
   display: flex;
   align-items: flex-end;
   gap: 0.9rem;
+  max-height: 50rem;
+  overflow: hidden;
 
   &:nth-of-type(2n) {
     flex-direction: row-reverse;
@@ -269,9 +273,9 @@
     border-radius: 0.8rem 0.8rem 0rem 0.8rem;
   }
 
-  p {
-    display: flex;
+  p:has(svg) {
     gap: 0.8rem;
+    display: none;
   }
 
   div img {

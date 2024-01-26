@@ -1,5 +1,8 @@
 import gsap from "gsap"
 import { $App } from ".."
+import { TextPlugin } from "gsap/all"
+
+gsap.registerPlugin(TextPlugin)
 
 export default class Home {
   app: $App
@@ -14,6 +17,7 @@ export default class Home {
     this.createPlay()
     this.createExpand()
     this.createTestimonial()
+    this.createHero()
 
     const menu = window.$(".menu")
 
@@ -31,8 +35,99 @@ export default class Home {
     })
   }
 
+  createHero() {
+    gsap
+      .timeline()
+      .set(".home__hero__chats", { autoAlpha: 1 })
+      .set(".home__hero__chat", { maxHeight: "0rem" })
+      .to(".home__hero__chat:nth-of-type(1)", { maxHeight: "50rem" })
+      .to(".home__hero__chat:nth-of-type(1)", { overflow: "unset" })
+      .to(".home__hero__chat:nth-of-type(1) p i", {
+        text: {
+          value: `Make a bot to automatically provide crypto insights and analytics.`,
+        },
+        duration: 5,
+        delay: 0.2,
+        ease: "none",
+      })
+
+      .to(".home__hero__chat:nth-of-type(2)", { maxHeight: "50rem" })
+      .to(".home__hero__chat:nth-of-type(2)", { overflow: "unset" })
+      .to(".home__hero__chat:nth-of-type(2) p:nth-of-type(1)", {
+        display: "flex",
+        delay: 0.2,
+      })
+      .to(".home__hero__chat:nth-of-type(2) p:nth-of-type(1) i", {
+        text: {
+          value: `Creating Bot..`,
+        },
+        duration: 0.5,
+        delay: 0.1,
+        ease: "none",
+      })
+      .to(".home__hero__chat:nth-of-type(2) p:nth-of-type(2)", {
+        display: "flex",
+        delay: 0.2,
+      })
+      .to(".home__hero__chat:nth-of-type(2) p:nth-of-type(2) i", {
+        text: {
+          value: `Integrating with Telegram`,
+        },
+        duration: 0.5,
+        delay: 0.1,
+        ease: "none",
+      })
+      .to(".home__hero__chat:nth-of-type(2) p:nth-of-type(3)", {
+        display: "flex",
+        delay: 0.2,
+      })
+      .to(".home__hero__chat:nth-of-type(2) p:nth-of-type(3) i", {
+        text: {
+          value: `Integrating with Discord`,
+        },
+        duration: 0.5,
+        delay: 0.1,
+        ease: "none",
+      })
+      .to(".home__hero__chat:nth-of-type(2) p:nth-of-type(4)", {
+        display: "flex",
+        delay: 0.2,
+      })
+      .to(".home__hero__chat:nth-of-type(2) p:nth-of-type(4) i", {
+        text: {
+          value: `Analyzing Data`,
+        },
+        duration: 0.5,
+        delay: 0.1,
+        ease: "none",
+      })
+
+      .to(".home__hero__chat:nth-of-type(3)", { maxHeight: "50rem" })
+      .to(".home__hero__chat:nth-of-type(3)", { overflow: "unset" })
+      .to(".home__hero__chat:nth-of-type(3) p", {
+        text: {
+          value: `What Bot can I create next????`,
+        },
+        duration: 3.75,
+        delay: 1,
+        ease: "none",
+      })
+
+      .to(".home__hero__chat:nth-of-type(4)", { maxHeight: "50rem" })
+      .to(".home__hero__chat:nth-of-type(4)", { overflow: "unset" })
+      .to(".home__hero__chat:nth-of-type(4) p", {
+        text: {
+          value: `There is no limits, integrate anywhere; in minutes.`,
+        },
+        duration: 2.5,
+        delay: 1,
+        ease: "none",
+      })
+  }
+
   createTestimonial() {
     const images = window.$$(".home__hero__clients img")
+    if (innerWidth < 768) return
 
     gsap.fromTo(
       images,
