@@ -1,3 +1,4 @@
+import gsap from "gsap"
 import { $App } from ".."
 
 export default class Home {
@@ -12,6 +13,7 @@ export default class Home {
     this.createNav()
     this.createPlay()
     this.createExpand()
+    this.createTestimonial()
 
     const menu = window.$(".menu")
 
@@ -28,6 +30,17 @@ export default class Home {
       })
     })
   }
+
+  createTestimonial() {
+    const images = window.$$(".home__hero__clients img")
+
+    gsap.fromTo(
+      images,
+      { x: "0rem" },
+      { x: "-156.8rem", duration: 15, ease: "linear", repeat: -1 }
+    )
+  }
+
   createExpand() {
     const btn = window.$(".home__outro__more")
     const article = window.$(".home__outro__article")
@@ -43,6 +56,7 @@ export default class Home {
       figure.style.top = "85rem"
     }
   }
+
   createPlay() {
     const btn = window.$(".home__hero__video svg")
     const video = window.$(

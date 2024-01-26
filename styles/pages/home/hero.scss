@@ -397,6 +397,7 @@
 
   .left {
     position: absolute;
+    z-index: 1;
     left: -1.8rem;
     background: linear-gradient(
       271deg,
@@ -419,6 +420,7 @@
 
   .right {
     position: absolute;
+    z-index: 1;
     left: 119.6rem;
     background: linear-gradient(
       271deg,
