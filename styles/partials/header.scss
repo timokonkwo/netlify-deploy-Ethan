@@ -84,15 +84,24 @@ header {
   display: flex;
   gap: 2rem;
   align-items: center;
+  @include media("<phone") {
+    flex-direction: column;
+    margin-top: 1.8rem;
+    gap: 2.7rem;
+  }
 }
 
 .header__menu__link {
   color: var(--transText);
   font-family: Inter;
   font-size: 1.4rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  &:hover {
+    color: var(--text);
+  }
+  @include media("<phone") {
+    font-size: 2rem;
+    color: var(--text);
+  }
 }
 
 .header__menu__wallet {
@@ -115,6 +124,38 @@ header {
   width: 13.7rem;
   display: grid;
   place-content: center;
+  @include media("<phone") {
+    width: 34.1rem;
+    margin-left: -0.8rem;
+    margin-top: 10vh;
+    position: absolute;
+    bottom: 21.4rem;
+    height: 4.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+
+    p {
+      color: #000;
+      padding-left: 1.6rem;
+    }
+
+    i {
+      color: #8650ff;
+      font-weight: 500;
+      padding: 1.01rem 2.2rem;
+      display: flex;
+      align-items: center;
+      border-radius: 3.8rem;
+      background: linear-gradient(78deg, #e5dff3 -152.28%, #fff 110.81%);
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
 }
 
 .header__menu__stake {
@@ -139,6 +180,17 @@ header {
   display: grid;
   place-content: center;
   margin-left: auto;
+  @include media("<phone") {
+    width: 34.1rem;
+    margin-left: -0.8rem;
+    margin-top: 10vh;
+    position: absolute;
+    bottom: 14.8rem;
+    height: 4.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .header__menu__toggle {
@@ -167,5 +219,41 @@ header {
   svg {
     width: 2.4rem;
     height: 2.4rem;
+  }
+}
+
+.menu {
+  position: relative;
+  top: -9rem;
+  background-color: var(--bg);
+  padding: 4.8rem 3.4rem;
+  height: 100vh;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  button {
+    width: 2.4rem;
+    height: 2.4rem;
+    .dark & {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+
+  img {
+    width: 29.7rem;
+    height: 1.87rem;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 8.13rem;
+    .dark & {
+      opacity: 0.5;
+    }
   }
 }

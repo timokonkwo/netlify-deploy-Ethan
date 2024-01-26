@@ -8,7 +8,7 @@ $breakpoints: (
 
 html {
   font-size: calc(100vw / 1512 * 10);
-  background: var(--bg);
+  background-color: var(--bg);
   @include media("<phone") {
     font-size: calc(100vw / 393 * 10);
     width: 100vw !important;

@@ -293,6 +293,7 @@
   position: absolute;
   top: 63.2rem;
   right: 21.17rem;
+  z-index: 1;
   @include media("<phone") {
     display: none;
   }
@@ -303,7 +304,6 @@
   height: 67.2rem;
   margin-top: 7.89rem;
   position: relative;
-  z-index: -1;
   border-radius: 1.2rem;
   border: 0.2rem solid #fff;
   background: linear-gradient(
@@ -334,6 +334,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease-out;
+    &.active {
+      opacity: 0;
+      pointer-events: none;
+    }
     @include media("<phone") {
       width: 11.2rem;
       height: 11.2rem;
