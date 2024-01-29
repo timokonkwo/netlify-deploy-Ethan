@@ -10,6 +10,7 @@ declare global {
     app: App
     $(el: string): HTMLElement
     $$(el: string): HTMLElement[]
+    cap: number
   }
 }
 

@@ -53,8 +53,9 @@ html(class=isDesktop ? "desktop" : isTablet ? "tablet" : isPhone ? "phone" : "" 
           block content
           include footer
 
+    script.
+      window.cap = !{JSON.stringify(cap).replace(/<\//g, "<\\/")}
     script(src="app/index.js") 
     script(src="https://cdn.jsdelivr.net/gh/ArthurPDev/KreativeScroll@main/kreativescroll.js")
-    script(src="scroll.js") 
     if isDev
       script(src="styles/index.js") 

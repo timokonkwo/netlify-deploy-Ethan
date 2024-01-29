@@ -57,7 +57,6 @@ export default class Home {
     this.createIntro()
     this.createModes()
     this.createNav()
-    this.createPlay()
     this.createExpand()
     this.createTestimonial()
     this.createHero()
@@ -85,7 +84,12 @@ export default class Home {
       trigger: ".home__meso",
       start: "25% 75%",
       animation: gsap
-        .timeline()
+        .timeline({
+          onComplete: () => {
+            window.$(".home__meso__stat:nth-of-type(3) h3 i").innerText =
+              window.cap.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+          },
+        })
         .counter(
           ".home__meso__stat:nth-of-type(1) h3 i",
           {
@@ -108,7 +112,7 @@ export default class Home {
         .counter(
           ".home__meso__stat:nth-of-type(3) h3 i",
           {
-            end: 101414052,
+            end: window.cap.toFixed(),
             duration: 1.5,
             dellay: 1,
             ease: "steps(10)",
@@ -236,7 +240,7 @@ export default class Home {
       .to(".home__hero__chat:nth-of-type(4)", { overflow: "unset" })
       .to(".home__hero__chat:nth-of-type(4) p", {
         text: {
-          value: `There is no limits, integrate anywhere; in minutes.`,
+          value: `There are no limits, integrate anywhere; in minutes.`,
         },
         duration: 2.5,
         delay: 1,
@@ -270,20 +274,6 @@ export default class Home {
       text.style.height = "unset"
       article.style.height = "119.5rem"
       figure.style.top = "85rem"
-    }
-  }
-
-  createPlay() {
-    const btn = window.$(".home__hero__video svg")
-    const video = window.$(
-      ".home__hero__video video"
-    ) as unknown as HTMLVideoElement
-
-    btn.onclick = () => {
-      btn.classList.add("active")
-      video.classList.add("active")
-      video.controls = true
-      video.play()
     }
   }
 

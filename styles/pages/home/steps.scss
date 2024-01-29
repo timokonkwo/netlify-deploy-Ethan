@@ -23,9 +23,11 @@
 .home__step {
   display: flex;
   gap: 12.55rem;
+  align-items: center;
   @include media("<phone") {
     flex-direction: column !important;
     gap: 0rem;
+    align-items: unset;
   }
 
   &[negate] {
@@ -51,39 +53,15 @@
   font-family: "TT Hoves Pro Trial Variable", sans-serif;
   font-size: 19.0927rem;
   line-height: 120%; /* 22.9112rem */
-  background: var(--background);
-  --background: radial-gradient(
-    65.33% 66.28% at 38.57% 34.72%,
-    #bfbfbf 0%,
-    rgba(241, 241, 241, 0.22) 77.69%,
-    rgba(163, 163, 163, 0) 99.96%
-  );
-  &[x2] {
-    --background: radial-gradient(
-      60.81% 143.69% at 100% 28.38%,
-      #bfbfbf 11.35%,
-      rgba(241, 241, 241, 0.22) 77.69%,
-      rgba(163, 163, 163, 0.33) 99.96%
-    );
-  }
-  &[x3] {
-    --background: radial-gradient(
-      64.53% 126.21% at -6.12% 25.11%,
-      #bfbfbf 11.35%,
-      rgba(241, 241, 241, 0.22) 77.69%,
-      rgba(163, 163, 163, 0.33) 99.96%
-    );
-  }
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #f1f0f5;
   position: absolute;
   left: -1.3rem;
+  top: -8.8rem;
   z-index: -1;
-
   @include media("<phone") {
     font-size: 15.0014rem;
     left: -0.4rem;
+    top: unset;
   }
   .dark & {
     opacity: 0.5;
@@ -97,7 +75,6 @@
   font-style: normal;
   font-weight: 493;
   line-height: 124%; /* 3.472rem */
-  padding-top: 9.4rem;
   width: 51.8rem;
   @include media("<phone") {
     font-size: 2rem;
@@ -118,9 +95,9 @@
   width: 51.85rem;
   @include media("<phone") {
     margin-top: 1.46rem;
-    font-size: 1.457rem;
+    font-size: 1.4rem;
     letter-spacing: 0.0146rem;
-    width: 36.7rem;
+    width: 35.3rem;
     padding-left: 2.3rem;
   }
 }
@@ -145,6 +122,18 @@
     #7f56d9;
   box-shadow: 0rem 0.1rem 0.15rem 0rem #cebcf7;
   margin-top: 2rem;
+  &[soon] {
+    color: #a39faf;
+    background: linear-gradient(
+        180deg,
+        rgba(216, 216, 216, 0.2) 0%,
+        rgba(255, 255, 255, 0) 25%
+      ),
+      #f1f1f1;
+    border: 0.1rem solid #cfcfcf;
+    pointer-events: none;
+    box-shadow: 0rem 0.1rem 0.15rem 0rem #fff;
+  }
   @include media("<phone") {
     width: 35.3rem;
     height: 4.4rem;
@@ -279,7 +268,7 @@
 .home__steps__pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.4rem 3.8rem;
+  gap: 2.4rem 3.7rem;
   width: 116rem;
   margin-top: 2.5rem;
   @include media("<phone") {

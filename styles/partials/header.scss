@@ -118,7 +118,7 @@ header {
       rgba(255, 255, 255, 0.72) 111.42%
     ),
     linear-gradient(261deg, #ffc4a4 -3.11%, #fff 123.01%);
-  margin-left: 25.2rem;
+  margin-left: auto;
   padding: 1.05rem 1.6rem;
   height: 4rem;
   width: 13.7rem;
@@ -179,7 +179,7 @@ header {
   width: 14.6rem;
   display: grid;
   place-content: center;
-  margin-left: auto;
+  margin-left: 0.8rem;
   @include media("<phone") {
     width: 34.1rem;
     margin-left: -0.8rem;
