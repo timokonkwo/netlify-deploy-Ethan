@@ -4,6 +4,7 @@
   width: 100vw;
   overflow-x: hidden;
   position: relative;
+  pointer-events: none;
   @include media("<phone") {
     padding-top: 8.24rem;
     padding-left: 2rem;
@@ -180,6 +181,7 @@
   place-content: center;
   margin-top: 6.1rem;
   margin-left: 50.8rem;
+  pointer-events: all;
   @include media("<phone") {
     width: 35.3rem;
     margin-top: 3.1rem;
@@ -286,6 +288,7 @@
   letter-spacing: 0.02rem;
   margin-top: 4.67rem;
   width: 70.3rem;
+  pointer-events: none;
   @include media("<phone") {
     font-size: 1.6rem;
     letter-spacing: 0.016rem;
@@ -334,6 +337,7 @@
     ),
     #7f56d9;
   box-shadow: 0rem 0.1rem 0.15rem 0rem #cebcf7;
+  pointer-events: all;
 }
 
 .home__outro__figure {

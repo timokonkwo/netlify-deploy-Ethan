@@ -2,11 +2,13 @@ extends ../partials/base.pug
 
 block variables
   - var template = "home"
+  - let slides = 0
+  - const createSlide = () => {slides++; return slides}
 
 block content 
   main.__home
     section.home__hero#home
-      h2.home__hero__head Create and Integrate Advanced Crypto & AI Bots - <i>No Coding required</i>
+      h2.home__hero__head Create and Integrate Advanced Crypto & AI Bots - <i>There are no limits</i>
       p.home__hero__sub An AI-powered platform tailored to be the voice to your web data -- <i>Powered by Paal AI</i>
       .home__hero__ctas
         a.home__hero__primary(href="https://docs.google.com/forms/d/1SqFcOrhzRt7TbXc8ullIt4aV0cFUH7FhdMythqwdHNE/viewform?edit_requested=true" target="_blank" rel="noopener noreferrer") Get a Custom Paal AI Bot
@@ -72,7 +74,7 @@ block content
             img(src="images/wave.png" alt="")
       .home__hero__figure 
         img(src="images/figure.png" alt="")
-      .home__hero__video
+      .home__hero__video(data-slide=createSlide())
         video(src="https://res.cloudinary.com/dllm7gfit/video/upload/f_auto:video,q_auto/v1/paal/clgqctsglzydizopaoeh")
         <svg width="178" height="178" viewBox="0 0 178 178" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="20" y="20" width="138" height="138" rx="69" fill="white" fill-opacity="0.5"/>
@@ -80,49 +82,49 @@ block content
           <rect width="178" height="178" rx="89" fill="white" fill-opacity="0.2"/>
           <path d="M118.362 84.7531L77.84 60.308C77.1568 59.8955 76.3743 59.6703 75.5733 59.6556C74.7724 59.641 73.982 59.8375 73.2838 60.2248C72.5922 60.6061 72.0161 61.1622 71.6147 61.8358C71.2133 62.5095 71.0012 63.2764 71 64.0577V112.942C71.0052 114.114 71.4822 115.236 72.326 116.062C73.1698 116.887 74.3115 117.348 75.5 117.344C76.3296 117.343 77.143 117.118 77.8513 116.692L118.362 92.2469C119.014 91.8555 119.552 91.3056 119.925 90.6499C120.299 89.9942 120.495 89.2548 120.495 88.5028C120.495 87.7508 120.299 87.0114 119.925 86.3557C119.552 85.7 119.014 85.15 118.362 84.7586V84.7531ZM75.5 112.89V64.0938L115.952 88.5L75.5 112.89Z" fill="#9477FF"/>
         </svg>
-      .home__hero__clients 
+      .home__hero__clients(data-slide=createSlide()) 
         p paal ai powers AI bot creation and machine learning with today's top companies.
-        div
+        div(data-slide=createSlide())
           .left(desktop)
           img(src="images/logos.png" alt="" desktop)
           img(src="images/logos.png" alt="" desktop)
           img(src="images/logosM.png" alt="" mobile)
           .right(desktop)
 
-    section.home__meso 
-      p.home__meso__pre ABOUT PAAL
-      h2.home__meso__head Paal is a robust ecosystem leveraging advanced <i>AI and ML</i> Technologies.
-      p.home__meso__sub Paal enables users to create personalized AI Bots, Deploy across multiple platforms including Telegram, Discord or your own app offering comprehensive solutions for businesses and projects.
+    section.home__meso
+      p.home__meso__pre(data-slide=createSlide()) ABOUT PAAL
+      h2.home__meso__head(data-slide=createSlide()) Paal is a robust ecosystem leveraging advanced <i>AI and ML</i> Technologies.
+      p.home__meso__sub(data-slide=createSlide()) Paal enables users to create personalized AI Bots, Deploy across multiple platforms including Telegram, Discord or your own app offering comprehensive solutions for businesses and projects.
       img.home__meso__icon(src="images/logo.png" alt="")
       img.home__meso__meso(src="images/meso.png" alt="" light)
       img.home__meso__meso(src="images/mesoDark.png" alt="" dark)
       .home__meso__stats 
-        .home__meso__stat 
-          h3 $200,000,00+
+        .home__meso__stat(data-slide=createSlide()) 
+          h3 $<i>10,000</i>,00+
           p Total Trading Volume
-        .home__meso__stat 
-          h3 3x Smarter
+        .home__meso__stat(data-slide=createSlide()) 
+          h3 <i>0</i>x Smarter
           p Than other Bots
-        .home__meso__stat 
-          h3 $101,414,052
+        .home__meso__stat(data-slide=createSlide()) 
+          h3 $<i>1,414,052</i>
           p Market Capitalization
-      figure.home__meso__bg#products
+      figure.home__meso__bg#products(data-slide=createSlide())
         img(src="images/mesobg.png" alt="" light desktop)
         img(src="images/mesobgM.png" alt="" light mobile)
         img(src="images/mesobgDark.png" alt="" dark desktop)
         img(src="images/mesobgDarkM.png" alt="" dark mobile)
-      p.home__meso__intro products
-      h3.home__meso__title PAAL is a <i>Powerful Ecosystem</i>, redefining Online trading experiences, engineered to enhance Investor knowledge, and empower communities with advanced utilities
+      p.home__meso__intro(data-slide=createSlide()) products
+      h3.home__meso__title(data-slide=createSlide()) PAAL is a <i>Powerful Ecosystem</i>, redefining Online trading experiences, engineered to enhance Investor knowledge, and empower communities with advanced utilities
       ul.home__meso__list 
-        li.home__meso__item
+        li.home__meso__item(data-slide=createSlide())
           img(src="images/meso-item-01.png" alt="")
           h4 Information
           p performs autonomous research, analysis, insights, data aggregation, knowledge extraction, curation.
-        li.home__meso__item
+        li.home__meso__item(data-slide=createSlide())
           img(src="images/meso-item-02.png" alt="")
           h4 Communities
           p PAAL AI drives engagement, dialog, entertainment, chat mod, automated support, and delivers information.
-        li.home__meso__item
+        li.home__meso__item(data-slide=createSlide())
           img(src="images/meso-item-03.png" alt="")
           h4 Utilities
           p Takes market actions based on information using powerful tools.
@@ -130,45 +132,45 @@ block content
     section.home__steps 
       ul.home__steps__list
         .home__step 
-          figure.home__step__media
+          figure.home__step__media(data-slide=createSlide())
             img(src="images/step-01.png" alt="")
-          div
+          div(data-slide=createSlide())
             .home__step__bg 1.
-            h4.home__step__head Powerful AI Bot Assistance for communities, groups or individuals to integrate anywhere.
+            h4.home__step__head(data-slide=createSlide()) Powerful AI Bot Assistance for communities, groups or individuals to integrate anywhere.
             ul.home__step__body 
-              li AI Assistance for any topic with real-time internet data.
-              li AI assistance for crypto research and real-time metrics.
-              li Customizable to any data/Content/Topic; Personality of Behavior
-              li White Label, Clones for Brands, Projects, Communities or Businesses.
-            a.home__step__cta(href="#home") Get Bot
+              li(data-slide=createSlide()) AI Assistance for any topic with real-time internet data.
+              li(data-slide=createSlide()) AI assistance for crypto research and real-time metrics.
+              li(data-slide=createSlide()) Customizable to any data/Content/Topic; Personality of Behavior
+              li(data-slide=createSlide()) White Label, Clones for Brands, Projects, Communities or Businesses.
+            a.home__step__cta(href="#home" data-slide=createSlide()) Get Bot
         .home__step(negate)
-          figure.home__step__media
+          figure.home__step__media(data-slide=createSlide())
             img(src="images/step-02.png" alt="")
-          div
+          div(data-slide=createSlide())
             .home__step__bg(x2) 2
-            h4.home__step__head Crypto trading add-on for Paal Bots/<i mobile> </i>Assistants
-            ul.home__step__body 
-              li Paal X Wallet
-              li Advanced Crypto Trading Functions
-              li Pro trading strategies; market intelligence
-              li White Label / Clones
-              li Autonomous AI Trading
-            a.home__step__cta(href="#home") Use PaalX
+            h4.home__step__head(data-slide=createSlide()) Crypto trading add-on for Paal Bots/<i mobile> </i>Assistants
+            ul.home__step__body(data-slide=createSlide()) 
+              li(data-slide=createSlide()) Paal X Wallet
+              li(data-slide=createSlide()) Advanced Crypto Trading Functions
+              li(data-slide=createSlide()) Pro trading strategies; market intelligence
+              li(data-slide=createSlide()) White Label / Clones
+              li(data-slide=createSlide()) Autonomous AI Trading
+            a.home__step__cta(href="#home" data-slide=createSlide()) Use PaalX
         .home__step 
-          figure.home__step__media
+          figure.home__step__media(data-slide=createSlide())
             img(src="images/step-03.png" alt="")
-          div
+          div(data-slide=createSlide())
             .home__step__bg(x3) 3
-            h4.home__step__head Powerful AI Bot/Assistant for Sports Betting
-            ul.home__step__body 
-              li AI for any sports research; real-time sports data
-              li Customizable to any sports data / any personality / behavior
-              li Basic/advanced betting functions (parlay bets, prop bets, etc)
-              li Autonomous AI Sports Betting
-              li White Label / Clone AI Sports Betting bots
-              li Pro betting strategies, betting intelligence
-            a.home__step__cta#services(href="#home") Coming soon
-      .home__steps__ad
+            h4.home__step__head(data-slide=createSlide()) Powerful AI Bot/Assistant for Sports Betting
+            ul.home__step__body(data-slide=createSlide()) 
+              li(data-slide=createSlide()) AI for any sports research; real-time sports data
+              li(data-slide=createSlide()) Customizable to any sports data / any personality / behavior
+              li(data-slide=createSlide()) Basic/advanced betting functions (parlay bets, prop bets, etc)
+              li(data-slide=createSlide()) Autonomous AI Sports Betting
+              li(data-slide=createSlide()) White Label / Clone AI Sports Betting bots
+              li(data-slide=createSlide()) Pro betting strategies, betting intelligence
+            a.home__step__cta#services(href="#home" data-slide=createSlide()) Coming soon
+      .home__steps__ad(data-slide=createSlide())
         img(src="images/globe.png" alt="")
         div
           p.home__steps__intro SERVICES
@@ -197,41 +199,41 @@ block content
           li.home__steps__pill
             p Online CIOs
       ul.home__steps__stats 
-        p Our Bot Solutions are loved by many
+        p(data-slide=createSlide()) Our Bot Solutions are loved by many
         div
-          li.home__steps__stat
+          li.home__steps__stat(data-slide=createSlide())
             h4 4000+
             p Active Groups
-          li.home__steps__stat
+          li.home__steps__stat(data-slide=createSlide())
             h4 3.7M+
             p Members
-          li.home__steps__stat
+          li.home__steps__stat(data-slide=createSlide())
             h4 30k+
             p Users
-          li.home__steps__stat
+          li.home__steps__stat(data-slide=createSlide())
             h4 1M+
             p Prompts
     section.home__outro 
-      p.home__outro__intro Paal Partner Program
-      h2.home__outro__head Earn revenue and other rewards by joining the <i>Paal Partner </i><i>Program!</i>
-      p.home__outro__sub Together with our partners, we're making Paal smarter and more capable of delivering advanced AI experiences. Paal Partners are tracked and rewarded by sharing in paal revenue streams related to the partner's contribution.
-      p.home__outro__aside We're currently seeking partners in the following categories:
+      p.home__outro__intro(data-slide=createSlide()) Paal Partner Program
+      h2.home__outro__head(data-slide=createSlide()) Earn revenue and other rewards by joining the <i>Paal Partner </i><i>Program!</i>
+      p.home__outro__sub(data-slide=createSlide()) Together with our partners, we're making Paal smarter and more capable of delivering advanced AI experiences. Paal Partners are tracked and rewarded by sharing in paal revenue streams related to the partner's contribution.
+      p.home__outro__aside(data-slide=createSlide()) We're currently seeking partners in the following categories:
       .home__outro__grid 
-        .home__outro__element 
+        .home__outro__element(data-slide=createSlide()) 
           h3 Communities
           p professional communities of interest, market trading groups, sports betting groups, gaming groups, crypto token groups, central trading exchanges, marketplaces, brands, educators, information hubs/portals
-        .home__outro__element 
+        .home__outro__element(data-slide=createSlide()) 
           h3 Influencers:
           p influencers / coaches / educators / strategy providers / tips providers
-        .home__outro__element 
+        .home__outro__element(data-slide=createSlide()) 
           h3 Data Providers
           p information, content, insights, knowledge, statistics, analytics, predictions
-        .home__outro__element 
+        .home__outro__element(data-slide=createSlide()) 
           h3 Capabilities
           p advanced AI trading, research, and automation, novel AI abilities in Web2, Web3 and beyond.
-      .home__outro__cta Become a partner today
+      .home__outro__cta(data-slide=createSlide()) Become a partner today
       .home__outro__article 
-        .home__outro__heading 
+        .home__outro__heading(data-slide=createSlide()) 
           img(src="images/logo.png" alt="")
           div
             <svg xmlns="http://www.w3.org/2000/svg" width="81" height="23" viewBox="0 0 81 23" fill="none">
@@ -251,7 +253,7 @@ block content
               </linearGradient>
               </defs>
             </svg>
-        h4.home__outro__title AI Research and Development
+        h4.home__outro__title(data-slide=createSlide()) AI Research and Development
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" desktop>
             <path d="M16.2502 11.25C16.2518 11.5048 16.1744 11.7539 16.0286 11.9629C15.8828 12.1719 15.6759 12.3306 15.4362 12.4172L11.401 13.9016L9.91665 17.9336C9.82875 18.1724 9.66971 18.3785 9.461 18.5241C9.25228 18.6697 9.00394 18.7477 8.74946 18.7477C8.495 18.7477 8.24665 18.6697 8.03793 18.5241C7.82922 18.3785 7.67018 18.1724 7.58228 17.9336L6.094 13.9062L2.06118 12.4219C1.82238 12.334 1.61628 12.1749 1.4707 11.9662C1.32513 11.7575 1.24707 11.5092 1.24707 11.2547C1.24707 11.0002 1.32513 10.7519 1.4707 10.5432C1.61628 10.3344 1.82238 10.1754 2.06118 10.0875L6.09634 8.60313L7.58072 4.57109C7.66862 4.33229 7.82766 4.12619 8.03637 3.98061C8.24509 3.83504 8.49343 3.75698 8.7479 3.75698C9.00237 3.75698 9.25072 3.83504 9.45943 3.98061C9.66815 4.12619 9.82719 4.33229 9.91509 4.57109L11.3995 8.60625L15.4315 10.0906C15.6708 10.176 15.8779 10.3331 16.0245 10.5407C16.171 10.7482 16.2499 10.9959 16.2502 11.25ZM11.8752 3.75H13.1252V5C13.1252 5.16576 13.1911 5.32473 13.3083 5.44194C13.4255 5.55915 13.5845 5.625 13.7502 5.625C13.916 5.625 14.075 5.55915 14.1922 5.44194C14.3094 5.32473 14.3752 5.16576 14.3752 5V3.75H15.6252C15.791 3.75 15.95 3.68415 16.0672 3.56694C16.1844 3.44973 16.2502 3.29076 16.2502 3.125C16.2502 2.95924 16.1844 2.80027 16.0672 2.68306C15.95 2.56585 15.791 2.5 15.6252 2.5H14.3752V1.25C14.3752 1.08424 14.3094 0.925268 14.1922 0.808058C14.075 0.690848 13.916 0.625 13.7502 0.625C13.5845 0.625 13.4255 0.690848 13.3083 0.808058C13.1911 0.925268 13.1252 1.08424 13.1252 1.25V2.5H11.8752C11.7095 2.5 11.5505 2.56585 11.4333 2.68306C11.3161 2.80027 11.2502 2.95924 11.2502 3.125C11.2502 3.29076 11.3161 3.44973 11.4333 3.56694C11.5505 3.68415 11.7095 3.75 11.8752 3.75ZM18.7502 6.25H18.1252V5.625C18.1252 5.45924 18.0594 5.30027 17.9422 5.18306C17.825 5.06585 17.666 5 17.5002 5C17.3345 5 17.1755 5.06585 17.0583 5.18306C16.9411 5.30027 16.8752 5.45924 16.8752 5.625V6.25H16.2502C16.0845 6.25 15.9255 6.31585 15.8083 6.43306C15.6911 6.55027 15.6252 6.70924 15.6252 6.875C15.6252 7.04076 15.6911 7.19973 15.8083 7.31694C15.9255 7.43415 16.0845 7.5 16.2502 7.5H16.8752V8.125C16.8752 8.29076 16.9411 8.44973 17.0583 8.56694C17.1755 8.68415 17.3345 8.75 17.5002 8.75C17.666 8.75 17.825 8.68415 17.9422 8.56694C18.0594 8.44973 18.1252 8.29076 18.1252 8.125V7.5H18.7502C18.916 7.5 19.075 7.43415 19.1922 7.31694C19.3094 7.19973 19.3752 7.04076 19.3752 6.875C19.3752 6.70924 19.3094 6.55027 19.1922 6.43306C19.075 6.31585 18.916 6.25 18.7502 6.25Z" fill="url(#paint0_linear_135_2685)"/>
             <defs>
@@ -261,17 +263,17 @@ block content
               </linearGradient>
             </defs>
           </svg>
-        p.home__outro__details Paal Labs is at the forefront of innovation, harnessing the power of deep learning technology and large language models to construct and fine-tune generative models. These models utilize vast quantities of data to train AI systems, enabling them to perform a wide array of tasks with precision and efficiency. 🤖💡<br/><br/>Our team is dedicated to the development and testing of autonomous AI assistant frameworks and agent swarms. These sophisticated systems are designed to ensure our AI bots deliver the most accurate and relevant responses, and behaviour for our customers. 🎯👥<br/><br/>Moreover, our AI bots are capable of executing highly complex tasks and workflows, providing our customers with a seamless and efficient experience. We are committed to pushing the boundaries of AI technology safely and responsibly to deliver the best possible solutions for our clients. 💼🚀<br/><br/>As we approach <i>AGI</i>, Paal is preparing our clients now for how to safely integrate AGI into their products and services via AI bots/ assistants to maximize potential and mitigate operational risks.
+        p.home__outro__details(data-slide=createSlide()) Paal Labs is at the forefront of innovation, harnessing the power of deep learning technology and large language models to construct and fine-tune generative models. These models utilize vast quantities of data to train AI systems, enabling them to perform a wide array of tasks with precision and efficiency. 🤖💡<br/><br/>Our team is dedicated to the development and testing of autonomous AI assistant frameworks and agent swarms. These sophisticated systems are designed to ensure our AI bots deliver the most accurate and relevant responses, and behaviour for our customers. 🎯👥<br/><br/>Moreover, our AI bots are capable of executing highly complex tasks and workflows, providing our customers with a seamless and efficient experience. We are committed to pushing the boundaries of AI technology safely and responsibly to deliver the best possible solutions for our clients. 💼🚀<br/><br/>As we approach <i>AGI</i>, Paal is preparing our clients now for how to safely integrate AGI into their products and services via AI bots/ assistants to maximize potential and mitigate operational risks.
         .home__outro__shadow(mobile)
         button.home__outro__more(mobile) Keep reading
         .home__outro__figure 
           img(src="images/figure.png" alt="")
-      .home__outro__bg 
+      .home__outro__bg
         img(src="images/homeOutroBg.png" alt="" desktop)
         img(src="images/homeOutroBgM.png" alt="" mobile)
-        p.home__outro__outro SAFETY
-        h5 Developing <i>Safe and Responsible</i> AI. Artificial Intelligent Bots
-        p.home__outro__end we are deeply committed to the development of safe and responsible AI. We recognize the transformative potential of artificial general intelligence, which can significantly impact every aspect of our lives.
+        p.home__outro__outro(data-slide=createSlide()) SAFETY
+        h5(data-slide=createSlide()) Developing <i>Safe and Responsible</i> AI Artificial Intelligent Bots
+        p.home__outro__end(data-slide=createSlide()) we are deeply committed to the development of safe and responsible AI. We recognize the transformative potential of artificial general intelligence, which can significantly impact every aspect of our lives.
 
 
 

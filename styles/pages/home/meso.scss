@@ -95,14 +95,16 @@
 }
 
 .home__meso__stats {
-  display: flex;
+  display: grid;
   gap: 14.95rem;
   margin-top: 3.8rem;
   width: fit-content;
+  grid-template-columns: 38rem 27.6rem 31.7rem;
   @include media("<phone") {
     padding-left: 1.8rem;
     padding-right: 3.8rem;
     margin: 3.35rem auto 0;
+    display: flex;
     flex-direction: column;
     gap: 6.5rem;
   }
@@ -120,6 +122,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    white-space: pre;
     @include media("<phone") {
       font-size: 4.2rem;
     }

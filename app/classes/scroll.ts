@@ -38,7 +38,7 @@ interface LenisEvent {
 export default class Scroll {
   lenis: Lenis
   constructor(page: string) {
-    this.create(page)
+    if (innerWidth >= 768) this.create(page)
   }
 
   create(page: string) {

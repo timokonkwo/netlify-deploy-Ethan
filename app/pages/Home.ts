@@ -1,11 +1,54 @@
 import gsap from "gsap"
 import { $App } from ".."
-import { TextPlugin } from "gsap/all"
+import { ScrollTrigger, TextPlugin } from "gsap/all"
+import Reveal from "../classes/reveal"
 
-gsap.registerPlugin(TextPlugin)
+gsap.registerPlugin(TextPlugin, ScrollTrigger)
+
+gsap.registerEffect({
+  name: "counter",
+  extendTimeline: true,
+  defaults: {
+    end: 0,
+    duration: 0.5,
+    ease: "power1",
+    increment: 1,
+  },
+  effect: (
+    targets: HTMLElement,
+    config: { duration: number; end: "number"; increment: number; ease: string }
+  ) => {
+    let tl = gsap.timeline()
+    let num = targets[0].innerText.replace(/\,/g, "")
+    targets[0].innerText = num
+    tl.to(
+      targets,
+      {
+        duration: config.duration,
+        innerText: config.end,
+        snap: {
+          innerText: config.increment,
+        },
+        modifiers: {
+          innerText: function (innerText) {
+            return Math.floor(gsap.utils.snap(config.increment, innerText))
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+          },
+        },
+        ease: config.ease,
+      },
+      0
+    )
+    return tl
+  },
+})
 
 export default class Home {
   app: $App
+  firstReveal: boolean
+  slides: NodeListOf<Element>
+  reveal: Reveal
   constructor(app: $App) {
     this.app = app
   }
@@ -18,6 +61,8 @@ export default class Home {
     this.createExpand()
     this.createTestimonial()
     this.createHero()
+    this.createReveal()
+    this.countUp01()
 
     const menu = window.$(".menu")
 
@@ -34,6 +79,80 @@ export default class Home {
       })
     })
   }
+
+  countUp01() {
+    ScrollTrigger.create({
+      trigger: ".home__meso",
+      start: "25% 75%",
+      animation: gsap
+        .timeline()
+        .counter(
+          ".home__meso__stat:nth-of-type(1) h3 i",
+          {
+            end: 200000,
+            duration: 1.2,
+            ease: "steps(10)",
+          },
+          0
+        )
+        .counter(
+          ".home__meso__stat:nth-of-type(2) h3 i",
+          {
+            end: 3,
+            duration: 1.2,
+            dellay: 0.5,
+            ease: "steps(9)",
+          },
+          0
+        )
+        .counter(
+          ".home__meso__stat:nth-of-type(3) h3 i",
+          {
+            end: 101414052,
+            duration: 1.5,
+            dellay: 1,
+            ease: "steps(10)",
+          },
+          0
+        ),
+    })
+  }
+
+  createReveal() {
+    this.firstReveal = true
+    this.slides = document.querySelectorAll("[data-slide]")
+    this.reveal = new Reveal(this, { elements: "[data-slide]" })
+  }
+
+  revealIn(x: { index: number }) {
+    if (this.firstReveal) {
+      this.firstReveal = false
+      gsap.utils
+        .toArray(this.slides)
+        .slice(0, Number(x.index))
+        .forEach((el: HTMLElement) => {
+          this.reveal.observer.unobserve(el)
+          el.style.opacity = "1"
+        })
+    } else {
+      gsap
+        .timeline({ delay: 0.2 })
+        .fromTo(
+          this.slides[Number(x.index - 1)],
+          { opacity: 0 },
+          { opacity: 1, duration: 0.75, ease: "ease.out" }
+        )
+        .fromTo(
+          this.slides[Number(x.index - 1)],
+          { y: "3.5rem" },
+          { y: "0rem", duration: 1.3, ease: "expo" },
+          "<"
+        )
+    }
+    this.firstReveal = false
+  }
+
+  revealOut() {}
 
   createHero() {
     const tl = gsap
