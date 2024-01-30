@@ -102,10 +102,10 @@ export default class Home {
         .counter(
           ".home__meso__stat:nth-of-type(2) h3 i",
           {
-            end: 3,
+            end: 10,
             duration: 1.2,
             dellay: 0.5,
-            ease: "steps(9)",
+            ease: "steps(10)",
           },
           0
         )
