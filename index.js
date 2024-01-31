@@ -37,18 +37,22 @@ const titles = {
 
 app.get("/", async (req, res) => {
   let cap
+  let volume
   try {
     const fetched = await fetch(
       "https://api.coingecko.com/api/v3/coins/paal-ai"
     )
     const data = await fetched.json()
     cap = data.market_data.fully_diluted_valuation.usd
+    volume = data.market_data.total_volume.usd
   } catch {
     cap = 101414052
+    volume = 20000000
   }
   res.render("pages/home", {
     title: titles["home"],
-    cap: cap,
+    cap,
+    volume,
   })
 })
 

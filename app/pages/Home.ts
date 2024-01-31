@@ -88,12 +88,14 @@ export default class Home {
           onComplete: () => {
             window.$(".home__meso__stat:nth-of-type(3) h3 i").innerText =
               window.cap.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+            window.$(".home__meso__stat:nth-of-type(1) h3 i").innerText =
+              window.volume.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
           },
         })
         .counter(
           ".home__meso__stat:nth-of-type(1) h3 i",
           {
-            end: 200000,
+            end: window.volume.toFixed(),
             duration: 1.2,
             ease: "steps(10)",
           },

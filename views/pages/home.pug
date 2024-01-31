@@ -89,7 +89,7 @@ block content
       img.home__meso__meso(src="images/mesoDark.png" alt="" dark)
       .home__meso__stats 
         .home__meso__stat(data-slide=createSlide()) 
-          h3 $<i>10,000</i>,00+
+          h3 $<i>#{(volume - 100000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</i>
           p Total Trading Volume
         .home__meso__stat(data-slide=createSlide()) 
           h3 <i>0</i>x Smarter

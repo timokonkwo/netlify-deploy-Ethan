@@ -55,6 +55,8 @@ html(class=isDesktop ? "desktop" : isTablet ? "tablet" : isPhone ? "phone" : "" 
 
     script.
       window.cap = !{JSON.stringify(cap).replace(/<\//g, "<\\/")}
+    script.
+      window.volume = !{JSON.stringify(volume).replace(/<\//g, "<\\/")}
     script(src="app/index.js") 
     script(src="https://cdn.jsdelivr.net/gh/ArthurPDev/KreativeScroll@main/kreativescroll.js")
     if isDev
