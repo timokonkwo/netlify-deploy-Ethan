@@ -20,7 +20,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^20.11.16",
     "include-media": "^2.0.0",
+    "netlify-cli": "^17.15.7",
     "nodemon": "^3.0.2",
     "parcel": "^2.10.3",
     "parcel-bundler": "^1.12.5",
