@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "source": "app/index.ts",
-  "main": "public/app/index.js",
+  "main": "functions/server.js",
   "targets": {
     "main": false
   },
   "browserslist": "> 0.25%, last 2 versions, not dead",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "build": "node index.js build",
+    "start": "node server-local.js",
+    "dev": "nodemon server-local.js",
+    "build": "netlify-lambda build express",
     "build:app": "parcel build app/index.ts --dist-dir public/app",
     "build:styles": "parcel build styles/index.scss --dist-dir public/styles && mv  -v ./public/styles/*.woff2 ./public/",
     "build:all": "bun run build:app && bun run build:styles",
@@ -24,20 +24,26 @@
     "@types/node": "^20.11.16",
     "include-media": "^2.0.0",
     "netlify-cli": "^17.15.7",
+    "netlify-lambda": "^2.0.16",
     "nodemon": "^3.0.2",
     "parcel": "^2.10.3",
     "parcel-bundler": "^1.12.5",
     "sass": "^1.69.5",
-    "typescript": "^5.3.2"
+    "typescript": "^5.3.2",
+    "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6"
   },
   "dependencies": {
     "@parcel/transformer-sass": "^2.10.3",
     "@studio-freight/lenis": "^1.0.29",
+    "body-parser": "^1.20.2",
     "express": "^4.18.2",
     "gsap": "^3.12.3",
     "gsap-trial": "gsap-trial.tgz",
     "node-fetch": "^3.3.2",
     "pug": "^3.0.2",
+    "serverless-http": "^3.2.0",
+    "terser": "^5.27.2",
     "ua-parser-js": "^1.0.37"
   },
   "nodemonConfig": {
