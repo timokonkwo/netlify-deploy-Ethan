@@ -9,12 +9,13 @@
   },
   "browserslist": "> 0.25%, last 2 versions, not dead",
   "scripts": {
-    "start": "rm -rf ./.cache && node index.js build",
-    "dev": "rm -rf ./.cache && nodemon index.js",
-    "build": "rm -rf ./.cache && node index.js build",
-    "build:app": "rm -rf ./.cache && rm -rf ./.parcel-cache && rm -rf ./public/app && parcel build app/index.ts --dist-dir public/app",
-    "build:styles": "rm -rf ./.cache && rm -rf ./.parcel-cache && rm -rf ./public/styles && rm -rf ./public/*.woff && rm -rf ./public/*.woff2 && rm -rf ./public/*.ttf && parcel build styles/index.scss --dist-dir public/styles && mv  -v ./public/styles/*.woff2 ./public/",
-    "build:all": "bun run build:app && bun run build:styles"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "node index.js build",
+    "build:app": "parcel build app/index.ts --dist-dir public/app",
+    "build:styles": "parcel build styles/index.scss --dist-dir public/styles && mv  -v ./public/styles/*.woff2 ./public/",
+    "build:all": "bun run build:app && bun run build:styles",
+    "pug": "node node_modules/pug-cli/index.js views/ --out ./"
   },
   "keywords": [],
   "author": "",
