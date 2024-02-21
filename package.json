@@ -7,6 +7,9 @@
   "targets": {
     "main": false
   },
+  "engines": {
+    "node": "16.20.0"
+  },
   "browserslist": "> 0.25%, last 2 versions, not dead",
   "scripts": {
     "start": "node server-local.js",
@@ -25,6 +28,7 @@
     "include-media": "^2.0.0",
     "netlify-cli": "^17.15.7",
     "netlify-lambda": "^2.0.16",
+    "terser": "^5.27.2",
     "nodemon": "^3.0.2",
     "parcel": "^2.10.3",
     "parcel-bundler": "^1.12.5",
@@ -43,7 +47,6 @@
     "node-fetch": "^3.3.2",
     "pug": "^3.0.2",
     "serverless-http": "^3.2.0",
-    "terser": "^5.27.2",
     "ua-parser-js": "^1.0.37"
   },
   "nodemonConfig": {
